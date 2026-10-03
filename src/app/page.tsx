@@ -1,9 +1,10 @@
+import Navber from "@/components/Navber"
 
 
 const Home = () => {
   return (
     <div>
-      <h2>Start News website</h2>
+      <Navber/>
     </div>
   )
 }
