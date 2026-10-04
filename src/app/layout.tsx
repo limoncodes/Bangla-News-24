@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Noto_Serif_Bengali} from "next/font/google";
+import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
+import Navber from "@/components/Navber";
+import Marrquee from "@/components/Marrquee";
 
 
 
@@ -21,6 +23,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${noto_Serif_Bengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Navber />
+        <Marrquee />
 
         <main className="container mx-auto">
           {children}
