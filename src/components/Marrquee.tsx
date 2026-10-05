@@ -10,7 +10,7 @@ const Marrquee = async () => {
   const data = await res.json()
   const headline = data.data;
   const hadlineslice = headline.slice(0, 15)
-  console.log(hadlineslice)
+ 
 
   return (
     <div className=" bg-red-900 my-4 ">
