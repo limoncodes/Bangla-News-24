@@ -26,7 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navber />
         <Marrquee />
 
-        <main className="container mx-auto">
+        <main className="container mx-auto px-4">
           {children}
         </main>
       </body>

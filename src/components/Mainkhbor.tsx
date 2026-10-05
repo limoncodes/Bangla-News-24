@@ -17,15 +17,15 @@ const Mainkhbor = async () => {
     const homedata = newsdata[0]
     const slicedata = homedata.articles.slice(0, 1)
     const slicedata2 = homedata.articles.slice(1, 5)
-    console.log(slicedata2)
+    
 
     return (
-        <div className=" flex  gap-4">
+        <div className=" flex justify-between   gap-4 ">
             {/* div1 */}
             <div>
                 {
                     slicedata.map((item: ItemType) => <div key={item.id}>
-                        <div className="card bg-base-100 w-100 shadow-sm">
+                        <div className="card bg-base-100 w-120 shadow-sm">
                             <figure>
 
                                 <Image
@@ -49,7 +49,7 @@ const Mainkhbor = async () => {
 
             </div>
             {/* div2 */}
-            <div className="w-full max-w-105 overflow-hidden rounded-lg border border-[#E1E1E1] bg-white">
+            <div className="w-full max-w-120 overflow-hidden rounded-lg border border-[#E1E1E1] bg-white">
                 {slicedata2.map((item: ItemType, index: number) => (
                     <div key={item.id}>
                         <div
