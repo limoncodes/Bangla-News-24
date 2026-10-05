@@ -18,6 +18,8 @@ const Selectetnews = async () => {
     const data = await res.json();
     const newsdata = data.data;
     const slinewdata = newsdata.slice(1);
+    const filter = slinewdata.filter((item: categoryTitleType) => item.title !==  'বিবিসি বাংলা এখন হোয়াটসঅ্যাপে!'&& item.title !== "বিবিসি বাংলা এখন ইন্সটাগ্রামে!" && item.title !== "সামাজিক মাধ্যমে বিবিসি বাংলা") as categoryTitleType[];
+    console.log(filter)
 
 
     console.log(slinewdata)
@@ -29,13 +31,13 @@ const Selectetnews = async () => {
             {/* title */}
             <div  >
                 {
-                    slinewdata.map((data: categoryTitleType) => <div key={data.title} >
+                    filter.map((data: categoryTitleType) => <div key={data.title} >
                         <h2 className="font-bold">{data.title}</h2>
                         <hr className="border-b-2 my-4 border-red-600" />
                         {/* catogeri arr prer section */}
 
                         {
-                            data.articles.map((aricle) => <h2 key={aricle.id}>{aricle.title}</h2>)
+                            data.articles.filter(category=> !category.title.includes("বিবিসি বাংলা এখন হোয়াটসঅ্যাপে!")).map((aricle) => <h2 key={aricle.id}>{aricle.title}</h2>)
 
 
                         }
