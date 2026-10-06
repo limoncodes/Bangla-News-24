@@ -3,6 +3,7 @@ import { Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Navber from "@/components/Navber";
 import Marrquee from "@/components/Marrquee";
+import Footer from "@/components/Footer";
 
 
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="container mx-auto px-4">
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );

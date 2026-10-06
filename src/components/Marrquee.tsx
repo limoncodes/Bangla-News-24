@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
 
 interface HeadlineType {
@@ -10,7 +11,7 @@ const Marrquee = async () => {
   const data = await res.json()
   const headline = data.data;
   const hadlineslice = headline.slice(0, 15)
- 
+
 
   return (
     <div className=" bg-red-900 my-4 ">
@@ -20,9 +21,9 @@ const Marrquee = async () => {
         <div className="flex items-center bg-red-700 text-white  overflow-hidden">
           <Marquee speed={130}>
 
-          {
-            hadlineslice.map((hadline: HeadlineType) => <h4 key={hadline.id} className="font-bold "><span className="mr-2 ml-3">●</span >{hadline.title}</h4>)
-          }
+            {
+              hadlineslice.map((hadline: HeadlineType) => <Link href={`/fullarticle/${hadline.id}`} key={hadline.id}> <h4 className="font-bold "><span className="mr-2 ml-3">●</span >{hadline.title}</h4></Link>)
+            }
           </Marquee>
 
         </div>
